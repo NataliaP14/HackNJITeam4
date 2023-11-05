@@ -1,5 +1,11 @@
 import java.util.Scanner;
 
+ Neel
+
+public class QuizMain {
+
+    public static void main(String[] args) {
+
 public class QuizMain {
 
     public static void main(String[] args) {
@@ -114,6 +120,7 @@ public class QuizMain {
        }
         input.close();
         
+ main
     }
 }
 
