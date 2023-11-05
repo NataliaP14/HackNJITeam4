@@ -70,3 +70,4 @@ public class ShipFacts {
         System.out.println(question);
     }
 }
+
