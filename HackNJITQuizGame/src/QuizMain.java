@@ -6,7 +6,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-Natalia
+
 class ImagePanel extends JPanel {
     private static final long serialVersionUID = 1L;
     private ImageIcon imageIcon;
@@ -216,7 +216,7 @@ public class QuizMain {
             }
         }
         
- main
+
     }
 }
 
