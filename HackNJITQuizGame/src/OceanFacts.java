@@ -2,14 +2,14 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.Set;
 
-public class OceanFacts1 {
+public class OceanFacts {
 
 
     int OceanFactsIncrement = 0;
     private Random randomOF = new Random();
     private HashMap<String, String> questionsOF = new HashMap<>();
 
-    public OceanFacts1() {
+    public OceanFacts() {
         initializeQuestionsOF();
     }
 
