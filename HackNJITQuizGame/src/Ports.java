@@ -1,31 +1,9 @@
-OliviaBranch
+
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Set;
 
-public class Ports {
-
-	public void displayQuestionP(String randomQuestionP) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public String getRandomQuestionP() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public boolean checkAnswerP(String randomQuestionP, String answerP) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public int getPortsIncremenet() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
-	    
+public class Ports {  
 	int portsIncrement = 0;
 	private Random randomP = new Random();
 	private HashMap<String, String> questionsP = new HashMap<>();
@@ -95,9 +73,6 @@ public class Ports {
 	    System.out.println(question);
 	 }
 
-public class Ports {
-	
-main
 }
 	
 

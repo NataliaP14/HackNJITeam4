@@ -2,8 +2,6 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.Set;
 
- Neel
-
 public class MarineLife {
 	
 	int marineLifeIncrement = 0;
@@ -42,10 +40,8 @@ public class MarineLife {
         //9
         questionsML.put("What do you call the phenomenon where certain species of fish, such as salmon, return to their birthplace to reproduce? \n"
         		+ "  a) Spawning\n  b) Migration\n  c) Homing\n  d) Nesting\n", "a");
-        //10
-        
-     
-    }
+   
+        }
 
     public boolean checkAnswerML(String question, String answer) {
         String correctAnswer = questionsML.get(question);
@@ -73,4 +69,4 @@ public class MarineLife {
         System.out.println(question);
     
     }
-    main
+

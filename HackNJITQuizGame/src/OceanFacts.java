@@ -4,30 +4,6 @@ import java.util.Set;
 
 public class OceanFacts {
 
-	public String getRandomQuestionOF() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void displayQuestionOF(String randomQuestionOF) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public boolean checkAnswerOF(String randomQuestionOF, String answerOF) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public int getOceanFactsIncremenet() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
- Samia
-
-
-
     int OceanFactsIncrement = 0;
     private Random randomOF = new Random();
     private HashMap<String, String> questionsOF = new HashMap<>();
@@ -92,7 +68,6 @@ public class OceanFacts {
         		+ "B) Potassium chloride\n"
         		+ "C) Magnesium chloride\n"
         		+ "D) Calcium chloride", "A");
-        //10
 
 
     }
@@ -125,4 +100,4 @@ public class OceanFacts {
 }
 
 
- main
+
