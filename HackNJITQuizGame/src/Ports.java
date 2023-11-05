@@ -73,9 +73,6 @@ public class Ports {
 	    System.out.println(question);
 	 }
 
-public class Ports {
-	
-
 }
 	
 
