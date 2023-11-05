@@ -23,10 +23,6 @@ public class OceanFacts {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
- Samia
-
-
 
     int OceanFactsIncrement = 0;
     private Random randomOF = new Random();
@@ -92,7 +88,6 @@ public class OceanFacts {
         		+ "B) Potassium chloride\n"
         		+ "C) Magnesium chloride\n"
         		+ "D) Calcium chloride", "A");
-        //10
 
 
     }
@@ -125,4 +120,4 @@ public class OceanFacts {
 }
 
 
- main
+
