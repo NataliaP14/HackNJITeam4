@@ -4,14 +4,17 @@ import java.util.Set;
 
 public class MarineLife {
 	
+	//incrementing marine life
 	int marineLifeIncrement = 0;
+	//randomizing questions
     private Random randomML = new Random();
+	//hashmap for the questions
     private HashMap<String, String> questionsML = new HashMap<>();
 
     public MarineLife() {
         initializeQuestionsML();
     }
-
+	//questions with answers
     private void initializeQuestionsML() {
     	//1
         questionsML.put("Which of the following is the largest animal in the world? \n"
@@ -42,12 +45,12 @@ public class MarineLife {
         		+ "  a) Spawning\n  b) Migration\n  c) Homing\n  d) Nesting\n", "a");
    
         }
-
+	//checks for the right answers
     public boolean checkAnswerML(String question, String answer) {
         String correctAnswer = questionsML.get(question);
         return answer.equalsIgnoreCase(correctAnswer);
     }
-
+	//generates a random question out of the questions in the hashmap
     public String getRandomQuestionML() {
     	
         Set<String> questionSetML = questionsML.keySet();
@@ -64,9 +67,10 @@ public class MarineLife {
     public int getMarineLifeIncremenet() {
     	return marineLifeIncrement;
     }
-
+	//displaying the question
     public void displayQuestionML(String question) {
         System.out.println(question);
     
     }
+}	
 
