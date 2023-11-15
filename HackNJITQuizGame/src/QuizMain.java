@@ -140,7 +140,6 @@ public class QuizMain {
                     "5. Ship Facts\n" +
                     "6. See your data\n" +
                     "7. Exit\n" +
-                    "6. Exit\n" +
                     "Enter your choice:");
             try {
             choice = Integer.parseInt(input);
