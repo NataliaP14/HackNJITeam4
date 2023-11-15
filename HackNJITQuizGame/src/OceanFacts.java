@@ -4,10 +4,6 @@ import java.util.Set;
 
 public class OceanFacts {
 
-
-    int OceanFactsIncrement = 0;
-    private Random randomOF = new Random();
-
    //incrementing 
     int OceanFactsIncrement = 0;
     private Random randomOF = new Random();
@@ -89,7 +85,6 @@ public class OceanFacts {
     }
 
     //generating a random question from the hashmap
-
     public String getRandomQuestionOF() {
 
         Set<String> questionSetOF = questionsOF.keySet();
@@ -108,8 +103,7 @@ public class OceanFacts {
     }
 
     //displaying the question
-
-    public void displayQuestionOF(String question) {
+public void displayQuestionOF(String question) {
         System.out.println(question);
     }
 }
