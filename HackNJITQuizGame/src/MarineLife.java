@@ -71,8 +71,6 @@ public class MarineLife {
     }
     
 }
-
-=======
 	//incrementing marine life
 	int marineLifeIncrement = 0;
 	//randomizing questions
