@@ -1,10 +1,9 @@
+
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Set;
 
-public class Ports {
-	
-	    
+public class Ports {  
 	int portsIncrement = 0;
 	private Random randomP = new Random();
 	private HashMap<String, String> questionsP = new HashMap<>();
@@ -73,6 +72,7 @@ public class Ports {
 	 public void displayQuestionP(String question) {
 	    System.out.println(question);
 	 }
+
 }
 	
 
