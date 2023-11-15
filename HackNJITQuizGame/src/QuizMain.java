@@ -151,11 +151,6 @@ public class QuizMain {
      
             switch (choice) {
 
-       
-                case 1:
-                	
-                    JOptionPane.showMessageDialog(null, "Hello! You can choose 1 of the 4 topics that we have. Once you choose a topic, "
-
            //Introduction
                 case 1:
                 	 JOptionPane.showMessageDialog(null, "Hello! You can choose 1 of the 4 topics that we have. Once you choose a topic, "
@@ -164,12 +159,6 @@ public class QuizMain {
                             + "sent back to the menu. If you get an answer correct, the program will give you another question. Once you've gotten "
                             + "three correct, you will be sent back to the menu. \nAt the end, you can see how many points you've earned.\n");
                     break;
-
-                    
-                    
-                case 2:
-                
-
             //Ports
                 case 2:
 
@@ -328,10 +317,6 @@ public class QuizMain {
                    
                     
                     break;
-                    //Ending
-                case 6: 
-                	JOptionPane.showMessageDialog(null, "Thank you for playing Keep The Boat Afloat!");
-                	break;
             	default:
             	//Prints this if the user enters the wrong format
 
