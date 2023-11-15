@@ -4,13 +4,24 @@ import java.util.Set;
 
 public class OceanFacts {
 
+
     int OceanFactsIncrement = 0;
     private Random randomOF = new Random();
+
+   //incrementing 
+    int OceanFactsIncrement = 0;
+    private Random randomOF = new Random();
+    //hashmap for the questions and answers
+
     private HashMap<String, String> questionsOF = new HashMap<>();
 
     public OceanFacts() {
         initializeQuestionsOF();
     }
+
+
+
+    //creating questions from the hashmap
 
     private void initializeQuestionsOF() {
         //1
@@ -71,11 +82,13 @@ public class OceanFacts {
 
 
     }
- 
+
     public boolean checkAnswerOF(String question, String answer) {
         String correctAnswer = questionsOF.get(question);
         return answer.equalsIgnoreCase(correctAnswer);
     }
+
+    //generating a random question from the hashmap
 
     public String getRandomQuestionOF() {
 
@@ -93,6 +106,8 @@ public class OceanFacts {
     public int getOceanFactsIncremenet() {
         return OceanFactsIncrement;
     }
+
+    //displaying the question
 
     public void displayQuestionOF(String question) {
         System.out.println(question);

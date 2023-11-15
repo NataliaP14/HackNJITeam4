@@ -3,6 +3,11 @@ import java.util.Random;
 import java.util.Set;
 
 public class ShipFacts {
+    //increment
+    int shipFactIncrement = 0;
+    private Random randomSF = new Random();
+    //hashmap for the questions and answers
+    private HashMap<String, String> questionsSF = new HashMap<>();
 
     int shipFactIncrement = 0;
     private Random randomSF = new Random();
@@ -11,6 +16,12 @@ public class ShipFacts {
     public ShipFacts() {
         initializeQuestionsSF();
     }
+
+
+    public ShipFacts() {
+        initializeQuestionsSF();
+    }
+    //adding the questions and answers
 
     private void initializeQuestionsSF() {
         questionsSF.put("Which ship is known as the \"unsinkable\" ship but tragically sank on its maiden voyage? \n"
@@ -45,10 +56,13 @@ public class ShipFacts {
 
     }
 
-    public boolean checkAnswersSF(String question, String answer) {
+    //checks the answers
+
+public boolean checkAnswersSF(String question, String answer) {
         String correctAnswer = questionsSF.get(question);
         return answer.equalsIgnoreCase(correctAnswer);
     }
+    //picks a question randomly from the hashmap
 
     public String getRandomQuestionSF() {
         Set<String> questionSetSF = questionsSF.keySet();
@@ -65,6 +79,8 @@ public class ShipFacts {
     public int getShipFactsIncrement() {
         return shipFactIncrement;
     }
+
+    //displaying the questions
 
     public void displayQuestionSF(String question) {
         System.out.println(question);

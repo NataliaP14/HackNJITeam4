@@ -6,6 +6,7 @@ import java.util.Set;
 public class Ports {  
 	int portsIncrement = 0;
 	private Random randomP = new Random();
+	//Hashmap for the questions and answers
 	private HashMap<String, String> questionsP = new HashMap<>();
 
 	public Ports() {
@@ -47,11 +48,12 @@ public class Ports {
 	    
 	    }
 
+	//checks the answer
 	public boolean checkAnswerP(String question, String answer) {
 	    String correctAnswer = questionsP.get(question);
 	    return answer.equalsIgnoreCase(correctAnswer);
 	}
-
+	//method for generating random questions from the hashmap
 	public String getRandomQuestionP() {
 	        
 	    Set<String> questionSetP = questionsP.keySet();
@@ -68,7 +70,7 @@ public class Ports {
 	 public int getPortsIncremenet() {
 	    return portsIncrement;
 	 }
-
+	//displaying questions
 	 public void displayQuestionP(String question) {
 	    System.out.println(question);
 	 }

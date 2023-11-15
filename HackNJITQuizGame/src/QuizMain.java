@@ -42,6 +42,12 @@ public class QuizMain {
     	int correctAnswers = 0;
     	int wrongAnswers = 0;
 
+
+    	//count to calculate the wins
+    	int count = 0;
+
+        //creating all of the classes for each topic
+
         MarineLife marine = new MarineLife();
         Ports port = new Ports();
         OceanFacts oceanF = new OceanFacts();
@@ -56,8 +62,8 @@ public class QuizMain {
         JFrame frameLose = new JFrame("Keep The Boat Afloat");
         frameLose.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameLose.setSize(1500, 1300);
-        
 
+ 
         // Create a JPanel to hold the image
         ImagePanel imagePanel = new ImagePanel("giphy.gif", 1500, 800);
         ImagePanel imagePanel2 = new ImagePanel("sink_boat.gif", 1500, 800);
@@ -89,6 +95,43 @@ public class QuizMain {
            	frameLose.setVisible(false);
         	frameWin.setVisible(true);
         	
+
+        // Create a JPanel to hold the image
+        ImagePanel imagePanel = new ImagePanel("giphy.gif", 1500, 800);
+        ImagePanel imagePanel2 = new ImagePanel("sink_boat.gif", 1500, 800);
+        
+        JLabel messageLabel = new JLabel("Thank you for playing Keep the Boat Afloat");
+        messageLabel.setHorizontalAlignment(JLabel.CENTER);
+    
+
+        //creating content panel for the boat gif
+        JPanel contentPanelWin = new JPanel(new BorderLayout());
+        contentPanelWin.add(imagePanel, BorderLayout.CENTER);
+        contentPanelWin.add(messageLabel, BorderLayout.SOUTH);
+        
+        //creating content panel for the sinking gif
+        JPanel contentPanelLose = new JPanel(new BorderLayout());
+        contentPanelLose.add(imagePanel2, BorderLayout.CENTER);
+        contentPanelLose.add(messageLabel, BorderLayout.SOUTH);
+        
+        //adding the panels
+        frameWin.add(contentPanelWin);
+        frameLose.add(contentPanelLose);
+        
+        //add the image
+        frameWin.add(imagePanel);
+        frameWin.setVisible(true);
+        
+        //Introduction
+        JOptionPane.showMessageDialog(null,"Welcome to Keep The Boat Afloat! Please choose a topic to take a quiz on");
+        int choice = 0;
+
+        while (choice < 6) {
+           	frameLose.setVisible(false);
+        	frameWin.setVisible(true);
+            
+        	//Menu
+
             String input = JOptionPane.showInputDialog("Main Menu\n" +
                     "1. Quiz Instructions\n" +
                     "2. Ports\n" +
@@ -97,6 +140,7 @@ public class QuizMain {
                     "5. Ship Facts\n" +
                     "6. See your data\n" +
                     "7. Exit\n" +
+                    "6. Exit\n" +
                     "Enter your choice:");
             try {
             choice = Integer.parseInt(input);
@@ -107,23 +151,35 @@ public class QuizMain {
             }
      
             switch (choice) {
+
        
                 case 1:
                 	
                     JOptionPane.showMessageDialog(null, "Hello! You can choose 1 of the 4 topics that we have. Once you choose a topic, "
+
+           //Introduction
+                case 1:
+                	 JOptionPane.showMessageDialog(null, "Hello! You can choose 1 of the 4 topics that we have. Once you choose a topic, "
+
                             + "you will be given 3 random questions out of the 10 you have. If you get a wrong answer, \nyou will be "
                             + "sent back to the menu. If you get an answer correct, the program will give you another question. Once you've gotten "
                             + "three correct, you will be sent back to the menu. \nAt the end, you can see how many points you've earned.\n");
                     break;
+
                     
                     
                 case 2:
                 
+
+            //Ports
+                case 2:
+
                     do {
                         JOptionPane.showMessageDialog(null, "You chose Ports");
                         String randomQuestionP = port.getRandomQuestionP();
                         String answerP = JOptionPane.showInputDialog(randomQuestionP);
                         if (port.checkAnswerP(randomQuestionP, answerP)) {
+
                         	int counts = (count++) + 1;
                             JOptionPane.showMessageDialog(null, "Correct! You got " + counts + " correct!");
                             count++;
@@ -148,8 +204,22 @@ public class QuizMain {
                     } while (count < 3);
                     
                     break;
-                    
-                    
+        
+                            JOptionPane.showMessageDialog(null, "Correct");
+                            count++;
+                            if (count == 3) {
+                            	JOptionPane.showMessageDialog(null, "Congrats, you got all three correct");
+                             }
+                            } else {
+                        	frameWin.setVisible(false);
+                        	frameLose.setVisible(true);
+                            JOptionPane.showMessageDialog(null, "Incorrect\nGAME OVER. You are now being sent to the main menu.");
+                      break;
+                        }
+                    } while (port.getPortsIncremenet() < 3);
+                    break;
+                //Marine Life
+
                 case 3:
                     do {
                         JOptionPane.showMessageDialog(null, "You chose Marine Life");
@@ -159,6 +229,7 @@ public class QuizMain {
                             JOptionPane.showMessageDialog(null, "Correct");
                             count++;
                             correctAnswers++;
+
                             if (count == 3) {
                             	JOptionPane.showMessageDialog(null, "Congrats, you got all three correct");
                             }
@@ -175,6 +246,11 @@ public class QuizMain {
                     break;
                     
                     
+                            break;
+                        }
+                    } while (marine.getMarineLifeIncremenet() < 3);
+                    break;
+                //Ocean Facts
                 case 4:
                 	
                     do {
@@ -185,6 +261,7 @@ public class QuizMain {
                             JOptionPane.showMessageDialog(null, "Correct");
                             count++;
                             correctAnswers++;
+
                             if (count == 3) {
                             	JOptionPane.showMessageDialog(null, "Congrats, you got all three correct");
                             }
@@ -201,6 +278,13 @@ public class QuizMain {
                     break;
                     
                     
+
+                            break;
+                        }
+                    } while (oceanF.getOceanFactsIncremenet() < 3);
+                    break;
+                //Ship Facts
+
                 case 5:
                     do {
                         JOptionPane.showMessageDialog(null, "You chose Ship Facts");
@@ -211,6 +295,7 @@ public class QuizMain {
                             frameWin.setVisible(true);
                             count++;
                             correctAnswers++;
+
                             if (count == 3) {
                             	JOptionPane.showMessageDialog(null, "Congrats, you got all three correct");
                             }
@@ -237,13 +322,23 @@ public class QuizMain {
                 	break;
             	default:
             	
+                            break;
+                        }
+                        JOptionPane.showMessageDialog(null,"Congratulations! You win! :) ");
+                    } while (ship.getShipFactsIncrement() < 3);
+                   
+                    
+                    break;
+                    //Ending
+                case 6: 
+                	JOptionPane.showMessageDialog(null, "Thank you for playing Keep The Boat Afloat!");
+                	break;
+            	default:
+            	//Prints this if the user enters the wrong format
+
             		JOptionPane.showMessageDialog(null,"Input mismatch! Please enter a number from the menu");
             		 break;
-        
-              
-                		
-                		
-                    
+   
                    
             }
         }
