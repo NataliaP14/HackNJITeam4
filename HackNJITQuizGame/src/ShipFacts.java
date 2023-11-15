@@ -9,10 +9,20 @@ public class ShipFacts {
     //hashmap for the questions and answers
     private HashMap<String, String> questionsSF = new HashMap<>();
 
+    int shipFactIncrement = 0;
+    private Random randomSF = new Random();
+    private HashMap<String, String> questionsSF = new HashMap<>();
+
+    public ShipFacts() {
+        initializeQuestionsSF();
+    }
+
+
     public ShipFacts() {
         initializeQuestionsSF();
     }
     //adding the questions and answers
+
     private void initializeQuestionsSF() {
         questionsSF.put("Which ship is known as the \"unsinkable\" ship but tragically sank on its maiden voyage? \n"
                 + "  a) Titanic\n  b) Britannic\n  c) Lusitania\n  d) Queen Mary\n", "a");
@@ -45,12 +55,15 @@ public class ShipFacts {
                 + "  a) Underwater boat\n  b) United boat\n  c) Unmanned boat\n  d) Submarine\n", "d");
 
     }
+
     //checks the answers
-    public boolean checkAnswersSF(String question, String answer) {
+
+public boolean checkAnswersSF(String question, String answer) {
         String correctAnswer = questionsSF.get(question);
         return answer.equalsIgnoreCase(correctAnswer);
     }
     //picks a question randomly from the hashmap
+
     public String getRandomQuestionSF() {
         Set<String> questionSetSF = questionsSF.keySet();
         int randomIndexSF = randomSF.nextInt(questionSetSF.size());
@@ -66,7 +79,9 @@ public class ShipFacts {
     public int getShipFactsIncrement() {
         return shipFactIncrement;
     }
+
     //displaying the questions
+
     public void displayQuestionSF(String question) {
         System.out.println(question);
     }

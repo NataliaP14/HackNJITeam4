@@ -4,16 +4,25 @@ import java.util.Set;
 
 public class OceanFacts {
 
-    //incrementing 
+
+    int OceanFactsIncrement = 0;
+    private Random randomOF = new Random();
+
+   //incrementing 
     int OceanFactsIncrement = 0;
     private Random randomOF = new Random();
     //hashmap for the questions and answers
+
     private HashMap<String, String> questionsOF = new HashMap<>();
 
     public OceanFacts() {
         initializeQuestionsOF();
     }
+
+
+
     //creating questions from the hashmap
+
     private void initializeQuestionsOF() {
         //1
         questionsOF.put("What percentage of the Earth's surface is covered by oceans?\n"
@@ -73,12 +82,14 @@ public class OceanFacts {
 
 
     }
-     //checks for the answer
+
     public boolean checkAnswerOF(String question, String answer) {
         String correctAnswer = questionsOF.get(question);
         return answer.equalsIgnoreCase(correctAnswer);
     }
+
     //generating a random question from the hashmap
+
     public String getRandomQuestionOF() {
 
         Set<String> questionSetOF = questionsOF.keySet();
@@ -95,7 +106,9 @@ public class OceanFacts {
     public int getOceanFactsIncremenet() {
         return OceanFactsIncrement;
     }
+
     //displaying the question
+
     public void displayQuestionOF(String question) {
         System.out.println(question);
     }
