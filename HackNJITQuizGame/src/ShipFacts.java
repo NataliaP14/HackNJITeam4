@@ -4,10 +4,6 @@ import java.util.Set;
 
 public class ShipFacts {
     //increment
-    int shipFactIncrement = 0;
-    private Random randomSF = new Random();
-    //hashmap for the questions and answers
-    private HashMap<String, String> questionsSF = new HashMap<>();
 
     int shipFactIncrement = 0;
     private Random randomSF = new Random();
